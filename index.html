@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Gallery | CodeAlpha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Field Notes Gallery</h1>
+  <p>Landscapes, animals and roads. Click any photo to open it full size.</p>
+  <nav class="filters" aria-label="Filter photos">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="nature">Nature</button>
+    <button class="chip" data-filter="animals">Animals</button>
+    <button class="chip" data-filter="travel">Travel</button>
+  </nav>
+</header>
+
+<main class="grid" id="grid"></main>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-btn close" id="close" aria-label="Close">&times;</button>
+  <button class="lb-btn prev" id="prev" aria-label="Previous photo">&#10094;</button>
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-btn next" id="next" aria-label="Next photo">&#10095;</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
